@@ -1,10 +1,16 @@
-# Semver Release Github Action ![](https://github.com/K-Phoen/semver-release-action/workflows/CI/badge.svg)
+# Why?
+
+Accepted the "org fix" pull request. Because orginal repo saw no actions for
+months.
+
+# Semver Release Github Action ![](https://github.com/seambiz/semver-release-action/workflows/CI/badge.svg)
 
 Automatically create [SemVer](https://semver.org/) compliant releases based on
 PR labels.
 
-Assuming that a PR is tagged with a "*semver-compliant*" label (*patch*, *minor* or *major*),
-then this action can create a tag and a GitHub release when it is merged.
+Assuming that a PR is tagged with a "_semver-compliant_" label (_patch_, _minor_
+or _major_), then this action can create a tag and a GitHub release when it is
+merged.
 
 **Note:** to determine the base tag for the increment, this action will try to
 find the most recent tag complying to [SemVer](https://semver.org/). No
@@ -52,12 +58,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Tag
-        uses: K-Phoen/semver-release-action@master
+        uses: seambiz/semver-release-action@master
         with:
           release_branch: master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 ```
 
 ## License
