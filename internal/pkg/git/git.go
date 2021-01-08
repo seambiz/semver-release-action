@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/K-Phoen/semver-release-action/internal/pkg/action"
 	"github.com/blang/semver"
 	"github.com/google/go-github/github"
+	"github.com/seambiz/semver-release-action/internal/pkg/action"
 	"github.com/spf13/cobra"
 	"golang.org/x/oauth2"
 )

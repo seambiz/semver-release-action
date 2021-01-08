@@ -1,13 +1,13 @@
 package event
 
 import (
+	"encoding/json"
 	"io/ioutil"
 	"os"
-	"encoding/json"
 
-	"github.com/K-Phoen/semver-release-action/internal/pkg/action"
-	"github.com/K-Phoen/semver-release-action/internal/pkg/semver"
 	"github.com/google/go-github/github"
+	"github.com/seambiz/semver-release-action/internal/pkg/action"
+	"github.com/seambiz/semver-release-action/internal/pkg/semver"
 	"github.com/spf13/cobra"
 )
 
@@ -132,4 +132,3 @@ func stripOrg(byteString []byte) []byte {
 	b, _ := json.MarshalIndent(o, "", "  ")
 	return b
 }
-
